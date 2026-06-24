@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAARON | Professional Construction Chemical Applicators</title>
+  <meta name="description" content="AAARON, a business unit of AAA Services Trading LLC, delivers specialized construction chemical applications, Seal Coatings, resin flooring, waterproofing, thermal insulation, protective coatings and concrete repairs across Oman and GCC." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#050608;
+      --bg2:#0a0d12;
+      --panel:#0d1118;
+      --panel2:#111722;
+      --glass:rgba(255,255,255,.065);
+      --line:rgba(255,255,255,.11);
+      --line2:rgba(246,178,26,.24);
+      --text:#f8f4ea;
+      --muted:#aeb5c0;
+      --gold:#f6b21a;
+      --orange:#f7941d;
+      --cyan:#6ee7ff;
+      --green:#8cffd2;
+      --shadow:0 30px 90px rgba(0,0,0,.42);
+      --radius:28px;
+      --max:1240px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,system-ui,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 18% 12%,rgba(110,231,255,.18),transparent 26%),
+        radial-gradient(circle at 82% 18%,rgba(246,178,26,.20),transparent 26%),
+        radial-gradient(circle at 50% 88%,rgba(140,255,210,.10),transparent 28%),
+        linear-gradient(180deg,#050608,#080a0f 35%,#050608);
+      overflow-x:hidden;
+    }
+
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:50;
+      opacity:.32;
+      mix-blend-mode:soft-light;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.75' numOctaves='3'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.09'/%3E%3C/svg%3E");
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(var(--max),92vw);margin:auto}
+    .mono{font-family:"Space Grotesk",Inter,sans-serif}
+
+    .topbar{
+      position:fixed;
+      top:16px;
+      left:50%;
+      transform:translateX(-50%);
+      width:min(var(--max),92vw);
+      z-index:100;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:12px 14px;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:24px;
+      background:rgba(5,6,8,.68);
+      backdrop-filter:blur(22px);
+      box-shadow:0 18px 55px rgba(0,0,0,.28);
+    }
+
+    .brand{display:flex;align-items:center;gap:13px;min-width:0}
+    .brand img{
+      width:52px;height:52px;border-radius:18px;object-fit:cover;background:#fff;
+      box-shadow:0 0 0 1px rgba(255,255,255,.18),0 0 28px rgba(246,178,26,.23);
+    }
+    .brand strong{display:block;font-weight:900;letter-spacing:3px;font-size:19px}
+    .brand span{display:block;font-size:10px;color:var(--muted);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+    .nav{display:flex;align-items:center;gap:20px}
+    .nav a{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.1px;color:#d5dde7;transition:.25s}
+    .nav a:hover{color:var(--gold)}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      border-radius:16px;
+      padding:15px 19px;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      border:1px solid rgba(255,255,255,.12);
+      transition:.25s;
+      cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{
+      border:0;
+      color:#080808;
+      background:linear-gradient(135deg,var(--gold),var(--orange));
+      box-shadow:0 18px 45px rgba(247,148,29,.28);
+    }
+    .btn-ghost{
+      background:rgba(255,255,255,.055);
+      color:#fff;
+    }
+
+    .menu{display:none;background:none;border:0;color:#fff;font-size:28px}
+    .mobile-menu{
+      display:none;
+      position:fixed;
+      top:88px;
+      left:4vw;
+      right:4vw;
+      z-index:90;
+      background:rgba(5,6,8,.96);
+      border:1px solid rgba(246,178,26,.24);
+      border-radius:24px;
+      padding:16px;
+      backdrop-filter:blur(18px);
+      box-shadow:var(--shadow)
+    }
+    .mobile-menu.open{display:grid}
+    .mobile-menu a{padding:14px;border-bottom:1px solid var(--line);font-weight:900;text-transform:uppercase}
+    .mobile-menu a:last-child{border-bottom:0}
+
+    .hero{
+      min-height:100vh;
+      position:relative;
+      display:flex;
+      align-items:center;
+      padding:150px 0 86px;
+      overflow:hidden;
+    }
+    .hero:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(90deg,rgba(110,231,255,.055) 1px,transparent 1px),
+        linear-gradient(rgba(110,231,255,.045) 1px,transparent 1px);
+      background-size:64px 64px;
+      mask-image:linear-gradient(to bottom,#000,transparent 92%);
+      z-index:-2;
+    }
+    .hero:after{
+      content:"AI-STYLE";
+      position:absolute;
+      right:-70px;
+      top:48%;
+      transform:translateY(-50%);
+      font-family:"Space Grotesk",Inter,sans-serif;
+      font-size:clamp(90px,16vw,230px);
+      font-weight:700;
+      letter-spacing:-9px;
+      color:rgba(255,255,255,.035);
+      pointer-events:none;
+      white-space:nowrap;
+      z-index:-1;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:38px;
+      align-items:center;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:9px 14px;
+      border-radius:999px;
+      border:1px solid rgba(110,231,255,.22);
+      background:linear-gradient(90deg,rgba(110,231,255,.10),rgba(246,178,26,.08));
+      color:#dff9ff;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:1.6px;
+      text-transform:uppercase;
+    }
+    .pill i{
+      width:8px;height:8px;border-radius:50%;
+      background:var(--cyan);
+      box-shadow:0 0 20px var(--cyan);
+    }
+
+    h1{
+      font-family:"Space Grotesk",Inter,sans-serif;
+      font-size:clamp(54px,7.4vw,112px);
+      line-height:.88;
+      letter-spacing:-5px;
+      margin:26px 0 22px;
+    }
+    .grad{
+      background:linear-gradient(90deg,#fff,var(--gold),var(--cyan));
+      -webkit-background-clip:text;
+      color:transparent;
+    }
+    .outline{
+      color:transparent;
+      -webkit-text-stroke:1.5px rgba(255,215,114,.95);
+    }
+    .hero p{
+      max-width:740px;
+      font-size:18px;
+      line-height:1.85;
+      color:#d8dee5;
+    }
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+
+    .hero-dashboard{
+      border:1px solid rgba(255,255,255,.12);
+      background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));
+      border-radius:34px;
+      padding:18px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-dashboard:before{
+      content:"";
+      position:absolute;
+      inset:-1px;
+      background:conic-gradient(from 140deg,rgba(110,231,255,.45),transparent,rgba(246,178,26,.55),transparent);
+      opacity:.48;
+      z-index:-1;
+    }
+    .dashboard-top{
+      border-radius:26px;
+      background:rgba(5,6,8,.55);
+      border:1px solid rgba(255,255,255,.10);
+      padding:24px;
+    }
+    .dash-header{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px}
+    .dash-header img{
+      width:76px;height:76px;border-radius:24px;object-fit:cover;background:#fff;
+      box-shadow:0 18px 55px rgba(246,178,26,.24);
+    }
+    .dash-header small{display:block;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px;font-size:10px;font-weight:900}
+    .dash-header strong{display:block;font-size:28px;font-weight:900;margin-top:4px}
+    .live{display:flex;align-items:center;gap:8px;color:var(--green);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:1px}
+    .live i{width:8px;height:8px;background:var(--green);border-radius:50%;box-shadow:0 0 16px var(--green)}
+
+    .metric-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:14px;
+    }
+    .metric{
+      padding:16px;
+      border-radius:20px;
+      background:rgba(255,255,255,.055);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .metric b{display:block;font-size:26px;color:var(--gold);font-weight:900}
+    .metric span{display:block;margin-top:5px;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
+
+    .ai-list{display:grid;gap:10px;margin-top:14px}
+    .ai-row{
+      display:flex;justify-content:space-between;gap:12px;align-items:center;
+      padding:14px 15px;border-radius:18px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08)
+    }
+    .ai-row span{font-size:13px;color:#dbe4ee}
+    .ai-row b{font-size:12px;color:var(--cyan)}
+
+    .ticker{
+      overflow:hidden;
+      background:linear-gradient(90deg,var(--gold),var(--orange),var(--gold));
+      color:#080808;
+      border-block:1px solid rgba(255,255,255,.12);
+    }
+    .ticker-track{
+      display:flex;
+      gap:30px;
+      white-space:nowrap;
+      padding:15px 0;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:1.5px;
+      animation:ticker 30s linear infinite;
+    }
+    @keyframes ticker{to{transform:translateX(-50%)}}
+
+    section{position:relative;padding:110px 0}
+    .section-head{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:26px;
+      margin-bottom:40px;
+    }
+    .section-head h2{
+      font-family:"Space Grotesk",Inter,sans-serif;
+      font-size:clamp(40px,5vw,76px);
+      line-height:.94;
+      letter-spacing:-3px;
+    }
+    .section-head p{max-width:560px;color:var(--muted);line-height:1.85}
+
+    .bento-grid{
+      display:grid;
+      grid-template-columns:1.3fr .7fr 1fr;
+      gap:16px;
+    }
+    .bento{
+      min-height:230px;
+      border-radius:28px;
+      padding:28px;
+      background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .bento:after{
+      content:"";
+      position:absolute;
+      width:160px;height:160px;border-radius:50%;
+      background:radial-gradient(circle,rgba(246,178,26,.18),transparent 70%);
+      right:-50px;bottom:-50px;
+    }
+    .bento.wide{grid-column:span 2}
+    .bento.tall{grid-row:span 2}
+    .bento small{
+      display:inline-flex;
+      padding:8px 11px;
+      border-radius:999px;
+      background:rgba(246,178,26,.09);
+      border:1px solid rgba(246,178,26,.16);
+      color:var(--gold);
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:1.2px;
+      font-size:10px;
+    }
+    .bento h3{font-size:28px;margin:22px 0 12px;line-height:1.12;letter-spacing:-1px}
+    .bento p{color:#cbd3dc;line-height:1.8;font-size:15px}
+    .mini-chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+    .mini-chips span{padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.055);border:1px solid var(--line);font-size:12px;font-weight:800;color:#dce5ee}
+
+    .light{
+      background:linear-gradient(180deg,#f9f4e9,#eee7d8);
+      color:#11120f;
+    }
+    .light .section-head p{color:#5c5a54}
+    .light .pill{background:rgba(246,178,26,.13);border-color:rgba(247,148,29,.18);color:#9a6400}
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+    .service{
+      min-height:292px;
+      border-radius:28px;
+      background:#fff;
+      border:1px solid rgba(0,0,0,.08);
+      box-shadow:0 20px 55px rgba(0,0,0,.08);
+      padding:25px;
+      position:relative;
+      overflow:hidden;
+      transition:.3s;
+    }
+    .service:hover{transform:translateY(-8px);box-shadow:0 32px 80px rgba(0,0,0,.15)}
+    .service:before{
+      content:"";
+      position:absolute;
+      top:-60px;right:-60px;width:150px;height:150px;border-radius:50%;
+      background:linear-gradient(135deg,rgba(246,178,26,.22),rgba(110,231,255,.12));
+    }
+    .service b{font-size:12px;color:var(--orange);letter-spacing:1.7px;text-transform:uppercase}
+    .service h3{font-size:24px;line-height:1.12;letter-spacing:-1px;margin:34px 0 12px}
+    .service p{font-size:14px;line-height:1.72;color:#55554e}
+    .service span{
+      display:inline-flex;margin-top:18px;padding:9px 12px;border-radius:999px;
+      background:#fbf3e3;color:#9a6400;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:1px;
+    }
+
+    .seal{
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 80% 15%,rgba(110,231,255,.18),transparent 25%),
+        linear-gradient(135deg,#061827,#0b365e 54%,#08111d);
+    }
+    .seal:before{
+      content:"SEAL COATINGS";
+      position:absolute;
+      right:-60px;
+      top:20px;
+      font-family:"Space Grotesk";
+      font-size:clamp(70px,10vw,150px);
+      font-weight:700;
+      color:rgba(255,255,255,.05);
+      letter-spacing:-5px;
+    }
+    .seal-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:center}
+    .seal-copy p{color:#d8ebff;line-height:1.9;margin:22px 0}
+    .products{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .product{
+      border-radius:26px;
+      padding:22px;
+      background:rgba(255,255,255,.095);
+      border:1px solid rgba(255,255,255,.18);
+      backdrop-filter:blur(12px);
+    }
+    .product strong{display:block;font-size:19px;margin-bottom:8px}
+    .product p{color:#d6eaff;line-height:1.7;font-size:14px}
+    .price{margin-top:13px;color:#fff!important;font-weight:900}
+
+    .workflow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .step{
+      padding:26px;border-radius:28px;background:rgba(255,255,255,.05);border:1px solid var(--line);box-shadow:var(--shadow)
+    }
+    .step b{font-size:36px;color:var(--cyan)}
+    .step h3{margin:18px 0 10px;font-size:22px}
+    .step p{color:var(--muted);line-height:1.75;font-size:14px}
+
+    .knowledge{
+      background:linear-gradient(180deg,#06070a,#0b0e14);
+      overflow:hidden;
+    }
+    .knowledge:before{
+      content:"AAARONTEC";
+      position:absolute;
+      left:-40px;top:20px;
+      font-family:"Space Grotesk";
+      font-size:clamp(75px,11vw,160px);
+      color:rgba(255,255,255,.035);
+      letter-spacing:-6px;
+      font-weight:700;
+    }
+    .article-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .article{
+      min-height:260px;
+      border-radius:28px;
+      padding:25px;
+      background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.025));
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      transition:.3s;
+    }
+    .article:hover{transform:translateY(-7px);border-color:rgba(110,231,255,.25)}
+    .article small{
+      color:var(--cyan);
+      background:rgba(110,231,255,.08);
+      border:1px solid rgba(110,231,255,.16);
+      border-radius:999px;
+      padding:8px 11px;
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      font-weight:900;
+    }
+    .article h3{font-size:23px;line-height:1.15;margin:22px 0 12px;letter-spacing:-.8px}
+    .article p{font-size:14px;line-height:1.75;color:var(--muted)}
+    .article a{display:inline-flex;margin-top:18px;color:var(--gold);font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:1px}
+
+    .parent{
+      background:linear-gradient(135deg,#0d0f14,#17130b);
+    }
+    .parent-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .parent-card{border-radius:28px;padding:30px;background:rgba(255,255,255,.055);border:1px solid var(--line);box-shadow:var(--shadow)}
+    .parent-card p{color:var(--muted);line-height:1.85;margin-top:15px}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .chip{padding:10px 14px;border-radius:999px;background:rgba(246,178,26,.09);border:1px solid rgba(246,178,26,.18);color:var(--gold);font-size:12px;font-weight:900}
+
+    .contact{
+      background:linear-gradient(180deg,#f9f4e9,#eee7d8);
+      color:#11120f;
+    }
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px}
+    .contact-panel{
+      background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:30px;padding:32px;box-shadow:0 24px 60px rgba(0,0,0,.09)
+    }
+    .contact-panel p{line-height:1.85;color:#5c5a54}
+    .contact-list{margin-top:18px}
+    .contact-list a{display:flex;justify-content:space-between;gap:10px;padding:16px 0;border-bottom:1px solid rgba(0,0,0,.08);font-weight:800}
+    .contact-list span{color:#6f6b64;font-weight:600}
+    .form{display:grid;gap:12px;margin-top:16px}
+    .form input,.form select,.form textarea{
+      width:100%;padding:15px 16px;border-radius:16px;border:1px solid rgba(0,0,0,.13);background:#fbfaf7;font:inherit;color:#111;
+    }
+    .form textarea{height:136px;resize:none}
+
+    .footer{padding:34px 0;background:#050608;color:#b8c0ca;border-top:1px solid rgba(255,255,255,.07)}
+    .footer .container{display:flex;justify-content:space-between;align-items:center;gap:20px}
+    .footer-brand{display:flex;align-items:center;gap:12px}
+    .footer-brand img{width:44px;height:44px;border-radius:15px;background:#fff}
+
+    @media(max-width:1100px){
+      .hero-grid,.seal-grid,.parent-grid,.contact-grid{grid-template-columns:1fr}
+      .hero-dashboard{order:-1}
+      .bento-grid{grid-template-columns:1fr 1fr}
+      .bento.wide,.bento.tall{grid-column:auto;grid-row:auto}
+      .service-grid{grid-template-columns:repeat(2,1fr)}
+      .workflow{grid-template-columns:repeat(2,1fr)}
+      .article-grid{grid-template-columns:repeat(2,1fr)}
+      .section-head{display:block}
+      .section-head p{margin-top:16px}
+    }
+    @media(max-width:880px){
+      .nav{display:none}
+      .menu{display:block}
+      .hero{padding-top:125px}
+      h1{letter-spacing:-3px}
+      .hero p{font-size:16px}
+      .metric-grid{grid-template-columns:1fr}
+      .brand span{white-space:normal}
+    }
+    @media(max-width:620px){
+      .topbar{top:10px;padding:11px 13px}
+      .brand img{width:45px;height:45px;border-radius:14px}
+      .brand strong{font-size:17px}
+      .brand span{font-size:8px}
+      section{padding:78px 0}
+      .hero-actions{display:grid}
+      .btn{width:100%}
+      .bento-grid,.service-grid,.products,.workflow,.article-grid{grid-template-columns:1fr}
+      .footer .container{flex-direction:column;text-align:center}
+      .contact-list a{display:block}
+      .contact-list span{display:block;margin-bottom:5px}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <a href="#hero" class="brand">
+      <img src="assets/aaa-logo.jpeg" alt="AAA Services Trading LLC Logo">
+      <div>
+        <strong>AAARON</strong>
+        <span>A Business Unit of AAA Services Trading LLC</span>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#seal">Seal Coatings</a>
+      <a href="#parent">AAA Group</a>
+      <a href="#contact" class="btn btn-primary">Get Quote</a>
+    </nav>
+
+    <button class="menu" id="menuBtn">☰</button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#seal">Seal Coatings</a>
+    <a href="#parent">AAA Group</a>
+    <a href="#contact">Get Quote</a>
+  </div>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="pill"><i></i> Future-ready construction chemical applicators</div>
+          <h1>Premium<br><span class="grad">Application</span><br><span class="outline">Technology</span></h1>
+          <p>
+            AAARON delivers specialized construction chemical application solutions for flooring, waterproofing,
+            thermal insulation, protective coatings, Seal Coatings and concrete repairs — backed by AAA Services Trading LLC.
+          </p>
+          <div class="hero-actions">
+            <a href="#services" class="btn btn-primary">Explore Solutions →</a>
+            <a href="https://wa.me/96891145302" target="_blank" class="btn btn-ghost">WhatsApp Enquiry</a>
+          </div>
+        </div>
+
+        <div class="hero-dashboard">
+          <div class="dashboard-top">
+            <div class="dash-header">
+              <div style="display:flex;gap:14px;align-items:center">
+                <img src="assets/aaa-logo.jpeg" alt="AAA Logo">
+                <div>
+                  <small>Smart Project Solutions</small>
+                  <strong>AAARON</strong>
+                </div>
+              </div>
+              <div class="live"><i></i> GCC Ready</div>
+            </div>
+
+            <div class="metric-grid">
+              <div class="metric"><b>8+</b><span>Service Lines</span></div>
+              <div class="metric"><b>AAA</b><span>Group Backing</span></div>
+              <div class="metric"><b>2026</b><span>Profile Ready</span></div>
+            </div>
+
+            <div class="ai-list">
+              <div class="ai-row"><span>Surface Protection Systems</span><b>Active</b></div>
+              <div class="ai-row"><span>Seal Coatings Product Range</span><b>Featured</b></div>
+              <div class="ai-row"><span>Direct Project Enquiry Support</span><b>Ready</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker">
+      <div class="ticker-track">
+        <span>Resin Flooring</span><span>Protective Coatings</span><span>Seal Coatings</span><span>Thermal Insulation</span><span>Concrete Repairs</span><span>Waterproofing</span><span>Decorative Flooring</span><span>Hygiene Flooring</span><span>Paint Works</span>
+        <span>Resin Flooring</span><span>Protective Coatings</span><span>Seal Coatings</span><span>Thermal Insulation</span><span>Concrete Repairs</span><span>Waterproofing</span><span>Decorative Flooring</span><span>Hygiene Flooring</span><span>Paint Works</span>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="pill"><i></i> Who We Are</div>
+            <h2>Built for Durability.<br>Designed for Performance.</h2>
+          </div>
+          <p>
+            AAARON combines skilled applicators, advanced equipment and approved construction chemical systems
+            to deliver long-term protection and better site performance.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <div class="bento wide">
+            <small>About AAARON</small>
+            <h3>Specialized construction chemical application partner for industrial, commercial and infrastructure projects.</h3>
+            <p>
+              We deliver cost-effective, high-quality construction chemical application solutions that enhance durability,
+              performance and sustainability of structures. Our focus is practical system selection, trained manpower,
+              quality execution and dependable project handover.
+            </p>
+          </div>
+
+          <div class="bento tall">
+            <small>Capabilities</small>
+            <h3>Application-first expertise</h3>
+            <p>
+              Flooring, coatings, waterproofing, insulation, concrete repair, surface protection and Seal Coatings support
+              under one professional execution team.
+            </p>
+            <div class="mini-chips">
+              <span>Certified Applicators</span>
+              <span>Advanced Equipment</span>
+              <span>Quality Control</span>
+              <span>GCC Ready</span>
+            </div>
+          </div>
+
+          <div class="bento">
+            <small>Vision</small>
+            <h3>Trusted regional leader</h3>
+            <p>Recognized for innovation, quality and long-term value in specialized construction chemical applications.</p>
+          </div>
+
+          <div class="bento">
+            <small>Support</small>
+            <h3>Backed by AAA Services</h3>
+            <p>Industrial supply network, trading strength and parent-company reach across Oman and GCC markets.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="light" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="pill"><i></i> Core Services</div>
+            <h2>Solutions Portfolio</h2>
+          </div>
+          <p>Specialized applications for surface performance, waterproof protection, energy saving and structural durability.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service"><b>01</b><h3>Resin Flooring</h3><p>Epoxy, PU, screeds, self-leveling, hygiene and decorative flooring for industrial and commercial environments.</p><span>Floor Systems</span></article>
+          <article class="service"><b>02</b><h3>Protective Coatings</h3><p>Concrete, steel, tank and anti-carbonation coating systems for corrosion resistance and long-life protection.</p><span>Surface Protection</span></article>
+          <article class="service"><b>03</b><h3>Thermal Insulation</h3><p>Ceramic coatings and roof insulation systems that reduce heat gain and improve energy performance.</p><span>Energy Saving</span></article>
+          <article class="service"><b>04</b><h3>Concrete Repairs</h3><p>Concrete restoration, resin injection and jacketing for strengthening and service-life extension.</p><span>Repair Works</span></article>
+          <article class="service"><b>05</b><h3>Waterproofing</h3><p>Substructure, roof, wet area and podium waterproofing using membranes, acrylic, polyurethane and polyurea systems.</p><span>Leak Protection</span></article>
+          <article class="service"><b>06</b><h3>Decorative Flooring</h3><p>Modern visual floor finishes including metallic epoxy and seamless decorative surfaces.</p><span>Premium Finish</span></article>
+          <article class="service"><b>07</b><h3>Hygiene Flooring</h3><p>Food industry and clean-area flooring systems designed for hygiene, durability and easy maintenance.</p><span>Clean Areas</span></article>
+          <article class="service"><b>08</b><h3>Paint Works</h3><p>Aseptic, anti-mold, thermal, intumescent and reflective paint applications for interior and exterior use.</p><span>Paint Systems</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seal" id="seal">
+      <div class="container seal-grid">
+        <div class="seal-copy">
+          <div class="pill"><i></i> Featured Product Range</div>
+          <h2 style="font-family:Space Grotesk;font-size:clamp(42px,5vw,78px);line-height:.95;margin-top:20px">Seal Coatings<br>Protection Range</h2>
+          <p>
+            Seal Coatings range supports high-performance, energy-saving, waterproof and long-life coating requirements
+            for rooftops, tanks, pipes, concrete surfaces and metal surfaces.
+          </p>
+          <a href="#contact" class="btn btn-primary">Request Seal Coatings Quote</a>
+        </div>
+
+        <div class="products">
+          <div class="product"><strong>Thermal‑Shield RF</strong><p>Ceramic coating paint for roof applications with high solar reflectance, weather resistance and energy saving.</p><p class="price">20L · 35–40 SQM · OMR 68.250 incl. VAT</p></div>
+          <div class="product"><strong>Thermal‑Shield IND</strong><p>Thermal paint for water tanks and pipes. Helps protect surfaces and reduce water temperature.</p><p class="price">20L · 35–40 SQM · OMR 73.500 incl. VAT</p></div>
+          <div class="product"><strong>Acroprime</strong><p>Universal acrylic concrete primer for interior and exterior use with excellent adhesion and quick dry performance.</p><p class="price">18L · Approx. 180 SQM · OMR 17.850 incl. VAT</p></div>
+          <div class="product"><strong>Metprime</strong><p>Acrylic metal primer undercoat with rust inhibitor, smooth finish and long-term metal surface protection.</p><p class="price">18L · Approx. 180 SQM · OMR 25.200 incl. VAT</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="pill"><i></i> Execution Method</div>
+            <h2>Professional Workflow</h2>
+          </div>
+          <p>A clean project method designed to keep every application accurate, measurable and site-ready.</p>
+        </div>
+
+        <div class="workflow">
+          <div class="step"><b>01</b><h3>Site Scan</h3><p>Review substrate condition, site environment, area and required performance criteria.</p></div>
+          <div class="step"><b>02</b><h3>System Mapping</h3><p>Recommend the correct flooring, coating, insulation or waterproofing solution.</p></div>
+          <div class="step"><b>03</b><h3>Smart Application</h3><p>Execute preparation and application with trained teams, approved materials and correct tools.</p></div>
+          <div class="step"><b>04</b><h3>Quality Handover</h3><p>Final inspection, quality review and clear client handover for project completion.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="parent" id="parent">
+      <div class="container parent-grid">
+        <div class="parent-card">
+          <div class="pill"><i></i> Parent Company Reference</div>
+          <h2 style="font-family:Space Grotesk;font-size:clamp(40px,5vw,74px);line-height:.95;margin-top:18px">Backed by<br>AAA Services Trading LLC</h2>
+          <p>AAA Services Trading LLC supports industrial, engineering, construction and project requirements with strong market reach, quality products and timely delivery through the AAA Group network.</p>
+        </div>
+        <div class="parent-card">
+          <h3 style="font-size:28px">AAA Group Divisions & Presence</h3>
+          <div class="chips">
+            <span class="chip">Industrial Supplies</span><span class="chip">Overhead Cranes</span><span class="chip">Engineering Division</span><span class="chip">Construction Chemicals</span><span class="chip">Human Resources</span><span class="chip">Oman</span><span class="chip">UAE</span><span class="chip">Saudi</span><span class="chip">India</span><span class="chip">Europe</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-panel">
+          <div class="pill"><i></i> Contact</div>
+          <h2 style="font-family:Space Grotesk;font-size:clamp(40px,5vw,74px);line-height:.95;margin:18px 0">Get a Project Quote</h2>
+          <p>Send project details, site area, surface condition, location and required system. Our team will respond with the suitable solution.</p>
+          <div class="contact-list">
+            <a href="tel:+96894369437"><span>Phone / WhatsApp</span> +968 9114 5302</a>
+            <a href="tel:+96893822077"><span>Office</span> +968 9436 9437</a>
+            <a href="mailto:sanjay@aaa-ron.com"><span>Email</span> sanjay@aaa-ron.com / info@aaa-ron.com</a>
+            <a href="https://www.aaa-ron.com" target="_blank"><span>Parent Website</span> www.aaa-ron.com</a>
+          </div>
+        </div>
+
+        <div class="contact-panel">
+          <h3 style="font-size:28px;margin-bottom:8px">Quick WhatsApp Enquiry</h3>
+          <p>Send enquiry directly from the website.</p>
+          <form class="form" onsubmit="sendWhatsApp(event)">
+            <input id="name" placeholder="Name / Company" required>
+            <select id="service">
+              <option>Resin Flooring</option>
+              <option>Protective Coatings</option>
+              <option>Seal Coatings</option>
+              <option>Thermal Insulation</option>
+              <option>Concrete Repairs</option>
+              <option>Waterproofing</option>
+              <option>Decorative Flooring</option>
+              <option>Paint Works</option>
+            </select>
+            <textarea id="msg" placeholder="Project details / area / location"></textarea>
+            <button class="btn btn-primary" type="submit">Send WhatsApp Enquiry →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">
+        <img src="assets/aaa-logo.jpeg" alt="AAA Logo">
+        <div>
+          <strong style="display:block;color:#fff">AAARON</strong>
+          <span>A Business Unit of AAA Services Trading LLC</span>
+        </div>
+      </div>
+      <p>© 2026 AAARON · Professional construction chemical application solutions</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("open");
+    });
+
+    mobileMenu.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => mobileMenu.classList.remove("open"));
+    });
+
+    window.addEventListener("scroll", () => {
+      const topbar = document.querySelector(".topbar");
+      topbar.style.background = window.scrollY > 30 ? "rgba(5,6,8,.88)" : "rgba(5,6,8,.68)";
+    });
+
+    function sendWhatsApp(e){
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const service = document.getElementById("service").value;
+      const msg = document.getElementById("msg").value;
+      const text = `AAARON Website Enquiry\nName/Company: ${name}\nService: ${service}\nDetails: ${msg}`;
+      window.open(`https://wa.me/96891145302?text=${encodeURIComponent(text)}`,"_blank");
+    }
+  </script>
+</body>
+</html>
