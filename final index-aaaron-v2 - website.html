@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AAARON | Specialized Construction Chemical Applicators</title>
+<meta name="description" content="AAARON delivers specialized construction chemical applications across flooring, waterproofing, coatings, concrete repairs and thermal insulation." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#050505;
+  --bg2:#0b0b0d;
+  --card:#111216;
+  --card2:#17181d;
+  --gold:#f7941d;
+  --gold2:#ffb347;
+  --gold3:#8f4f08;
+  --text:#ffffff;
+  --muted:rgba(255,255,255,.66);
+  --soft:rgba(255,255,255,.42);
+  --line:rgba(255,255,255,.11);
+  --line2:rgba(247,148,29,.28);
+  --shadow:0 24px 80px rgba(0,0,0,.55);
+  --radius:28px;
+  --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+body:before{
+  content:"";
+  position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(circle at 76% 6%, rgba(247,148,29,.20), transparent 28%),
+    radial-gradient(circle at 4% 34%, rgba(247,148,29,.11), transparent 26%),
+    linear-gradient(180deg,#050505 0%,#0b0b0d 48%,#050505 100%);
+}
+body:after{
+  content:"";
+  position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.27;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");
+  mix-blend-mode:overlay;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+.top-glow{position:absolute;inset:0;z-index:-1;overflow:hidden}.orb{position:absolute;border-radius:999px;filter:blur(45px);opacity:.5}.orb.one{width:340px;height:340px;background:rgba(247,148,29,.25);right:-120px;top:-90px}.orb.two{width:260px;height:260px;background:rgba(255,255,255,.06);left:-110px;top:220px}
+
+/* NAV */
+.nav{
+  position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:1000;
+  width:min(var(--max),calc(100% - 32px));
+  height:68px;border:1px solid rgba(255,255,255,.12);border-radius:24px;
+  display:flex;align-items:center;justify-content:space-between;padding:0 18px 0 24px;
+  background:rgba(8,8,9,.62);backdrop-filter:blur(22px);box-shadow:0 14px 50px rgba(0,0,0,.36);
+  transition:.3s ease;
+}
+.nav.scrolled{height:60px;top:8px;border-color:rgba(247,148,29,.25);background:rgba(8,8,9,.88)}
+.brand{display:flex;align-items:center;gap:12px}.brand-badge{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--gold),#ffe0a5);color:#0a0a0a;display:grid;place-items:center;font-weight:900;letter-spacing:-1px}.brand-text strong{display:block;font-family:"Space Grotesk",sans-serif;font-size:20px;letter-spacing:2px}.brand-text strong span{color:var(--gold)}.brand-text small{display:block;color:var(--soft);font-size:9px;letter-spacing:1.7px;text-transform:uppercase;margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:24px;list-style:none}.nav-links a{font-size:12px;text-transform:uppercase;letter-spacing:1.3px;color:rgba(255,255,255,.66);font-weight:700}.nav-links a:hover{color:#fff}.nav-quote{padding:12px 18px;border-radius:16px;background:var(--gold);color:#060606!important;box-shadow:0 12px 28px rgba(247,148,29,.28)}
+.menu-btn{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.05);color:#fff;font-size:21px}.mobile-panel{position:fixed;top:86px;left:16px;right:16px;display:none;z-index:999;padding:18px;border:1px solid rgba(247,148,29,.24);border-radius:22px;background:rgba(10,10,10,.96);backdrop-filter:blur(22px)}.mobile-panel.open{display:block}.mobile-panel a{display:block;padding:15px 8px;border-bottom:1px solid rgba(255,255,255,.08);font-weight:800;text-transform:uppercase;letter-spacing:1px}.mobile-panel a:last-child{border-bottom:0;color:var(--gold)}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;align-items:center;position:relative;padding:140px 0 80px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:9px 13px;border:1px solid rgba(247,148,29,.24);border-radius:999px;background:rgba(247,148,29,.08);color:var(--gold2);font-size:11px;letter-spacing:1.8px;text-transform:uppercase;font-weight:800}.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 18px var(--gold)}
+h1{font-family:"Space Grotesk",Inter,sans-serif;font-size:clamp(48px,7.4vw,96px);line-height:.91;letter-spacing:-4px;margin:24px 0 22px}.gradient-word{display:inline-block;background:linear-gradient(90deg,#fff 0%,#ffd193 44%,var(--gold) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:18px;line-height:1.76;max-width:620px}.hero-actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:18px;padding:16px 22px;font-size:13px;font-weight:900;letter-spacing:1.2px;text-transform:uppercase;transition:.25s ease}.btn-primary{background:var(--gold);color:#070707;box-shadow:0 22px 46px rgba(247,148,29,.26)}.btn-primary:hover{transform:translateY(-3px);background:var(--gold2)}.btn-secondary{border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff}.btn-secondary:hover{border-color:var(--line2);transform:translateY(-3px)}
+.hero-card{position:relative;min-height:560px;border:1px solid rgba(255,255,255,.12);border-radius:36px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.025));box-shadow:var(--shadow);overflow:hidden;padding:28px}.hero-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 18%,rgba(247,148,29,.24),transparent 38%),linear-gradient(135deg,rgba(247,148,29,.08),transparent 42%);}.mesh{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 88%);opacity:.55}.big-mark{position:absolute;right:-22px;bottom:28px;font-family:"Space Grotesk";font-size:116px;font-weight:900;letter-spacing:-8px;color:rgba(255,255,255,.045);writing-mode:vertical-rl}.floating-panel{position:absolute;left:28px;right:28px;bottom:28px;border:1px solid rgba(255,255,255,.14);border-radius:28px;padding:22px;background:rgba(4,4,5,.72);backdrop-filter:blur(18px)}.panel-title{font-size:12px;text-transform:uppercase;letter-spacing:1.8px;color:var(--gold);font-weight:900;margin-bottom:14px}.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.mini-stat{padding:16px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)}.mini-stat strong{display:block;font-size:28px;font-family:"Space Grotesk";color:#fff}.mini-stat span{display:block;margin-top:4px;font-size:10px;line-height:1.35;color:var(--soft);text-transform:uppercase;letter-spacing:1px}.seal{position:absolute;top:32px;left:32px;width:142px;height:142px;border-radius:50%;border:1px solid rgba(247,148,29,.32);display:grid;place-items:center;background:rgba(247,148,29,.06);box-shadow:inset 0 0 45px rgba(247,148,29,.08)}.seal span{text-align:center;font-family:"Space Grotesk";font-size:18px;font-weight:900;line-height:1.05;color:var(--gold2)}
+
+/* STRIP */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.035);overflow:hidden}.marquee{display:flex;width:max-content;animation:marq 26s linear infinite}.marquee span{padding:18px 28px;color:rgba(255,255,255,.7);font-size:12px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase}.marquee b{color:var(--gold);margin-left:22px}@keyframes marq{to{transform:translateX(-50%)}}
+
+/* SECTION COMMON */
+.section{padding:112px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:38px;margin-bottom:42px}.section h2{font-family:"Space Grotesk";font-size:clamp(36px,5vw,64px);line-height:.95;letter-spacing:-2.2px}.section-head p{max-width:470px;color:var(--muted);line-height:1.75}.muted{color:var(--muted)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}.about-copy{border:1px solid var(--line);border-radius:var(--radius);padding:38px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025))}.about-copy p{color:var(--muted);line-height:1.85;margin-top:16px}.quote{margin-top:26px;padding:18px 22px;border-left:3px solid var(--gold);border-radius:0 20px 20px 0;background:rgba(247,148,29,.08);font-weight:900;color:#fff}.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.feature{padding:24px;border:1px solid var(--line);border-radius:24px;background:var(--card);transition:.25s}.feature:hover{transform:translateY(-5px);border-color:var(--line2);background:linear-gradient(180deg,rgba(247,148,29,.10),rgba(255,255,255,.035))}.icon{width:46px;height:46px;border-radius:16px;background:rgba(247,148,29,.12);border:1px solid rgba(247,148,29,.22);display:grid;place-items:center;margin-bottom:16px}.feature h3,.service h3,.why-card h3,.step h3{font-family:"Space Grotesk";font-size:20px;letter-spacing:-.5px}.feature p,.service p,.why-card p,.step p{margin-top:9px;color:var(--muted);font-size:14px;line-height:1.65}
+
+/* SERVICES */
+.services{background:linear-gradient(180deg,#f5efe4,#fff7eb);color:#090909;position:relative;overflow:hidden}.services:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 96% 8%,rgba(247,148,29,.24),transparent 32%)}.services .eyebrow{background:rgba(0,0,0,.04);color:#8a4b08}.services .section-head p{color:rgba(0,0,0,.58)}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative}.service{min-height:300px;border-radius:28px;padding:26px;background:#101114;color:#fff;border:1px solid rgba(0,0,0,.06);box-shadow:0 20px 50px rgba(0,0,0,.12);display:flex;flex-direction:column;justify-content:space-between;transition:.28s}.service:hover{transform:translateY(-7px);background:linear-gradient(135deg,#111,#2a1704 70%);box-shadow:0 26px 58px rgba(0,0,0,.2)}.service-num{font-size:12px;color:var(--gold);font-weight:900;letter-spacing:2px}.service p{color:rgba(255,255,255,.62)}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}.tags span{font-size:10px;text-transform:uppercase;letter-spacing:.8px;border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.52);padding:6px 9px;border-radius:999px}
+
+/* PROCESS */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{position:relative;padding:28px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02))}.step:before{content:attr(data-step);display:block;width:50px;height:50px;border-radius:18px;background:rgba(247,148,29,.12);border:1px solid rgba(247,148,29,.25);display:grid;place-items:center;color:var(--gold);font-weight:900;margin-bottom:22px}.step:hover{border-color:var(--line2)}
+
+/* WHY */
+.why{background:var(--gold);color:#070707;position:relative;overflow:hidden}.why:before{content:"AAARON";position:absolute;right:-80px;top:14%;font-family:"Space Grotesk";font-size:190px;font-weight:900;color:rgba(0,0,0,.06);letter-spacing:-12px}.why-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center;position:relative}.why h2{color:#070707}.why p{color:rgba(0,0,0,.65);line-height:1.8}.why-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}.why-card{padding:25px;border-radius:24px;background:rgba(0,0,0,.08);border:1px solid rgba(0,0,0,.09);transition:.25s}.why-card:hover{transform:translateY(-5px);background:rgba(0,0,0,.13)}.why-card p{font-size:14px}
+
+/* EXPERTISE */
+.expertise-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:38px}.sticky{position:sticky;top:100px;height:max-content}.expert-list{display:grid;gap:10px}.expert-item{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:rgba(255,255,255,.035)}.expert-item summary{list-style:none;cursor:pointer;padding:21px 24px;display:flex;justify-content:space-between;gap:14px;align-items:center;font-family:"Space Grotesk";font-size:20px;font-weight:700}.expert-item summary::-webkit-details-marker{display:none}.expert-item summary span{color:var(--gold);font-size:13px;letter-spacing:1.5px}.expert-item p{padding:0 24px 24px;color:var(--muted);line-height:1.75}.expert-item[open]{border-color:var(--line2);background:rgba(247,148,29,.055)}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px}.contact-card{border:1px solid var(--line);border-radius:var(--radius);padding:32px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));box-shadow:var(--shadow)}.contact-line{display:flex;gap:14px;padding:18px;border:1px solid var(--line);border-radius:20px;margin-top:12px;background:rgba(255,255,255,.035)}.contact-line b{display:block;color:var(--gold);font-size:11px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px}.contact-line span{color:#fff;font-weight:700}.form{display:grid;gap:12px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form input,.form select,.form textarea{width:100%;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.05);color:#fff;padding:16px;font:inherit;outline:0}.form textarea{min-height:130px;resize:vertical}.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--line2);box-shadow:0 0 0 4px rgba(247,148,29,.08)}.form select option{background:#111}.full{width:100%;border:0;cursor:pointer}
+
+/* FOOTER */
+.footer{padding:50px 0 28px;border-top:1px solid rgba(247,148,29,.16);background:#070707}.footer-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:28px}.footer h4{font-family:"Space Grotesk";font-size:22px;margin-bottom:10px}.footer p,.footer a{color:var(--soft);font-size:14px;line-height:1.8}.footer a:hover{color:var(--gold)}.footer ul{list-style:none}.footer li{margin:8px 0}.copyright{margin-top:36px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--soft);font-size:12px}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:1020px){.hero-grid,.about-grid,.why-grid,.expertise-grid,.contact-grid{grid-template-columns:1fr}.service-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr)}.hero-card{min-height:430px}.sticky{position:static}.section-head{align-items:start;flex-direction:column}.nav-links{display:none}.menu-btn{display:block}}
+@media(max-width:640px){.container{width:min(100% - 28px,var(--max))}.nav{width:calc(100% - 20px);top:8px;border-radius:20px;padding-left:14px}.brand-badge{width:38px;height:38px}.brand-text strong{font-size:17px}.brand-text small{display:none}.hero{padding-top:120px}.hero p{font-size:15px}.hero-actions .btn{width:100%}.hero-card{min-height:360px;padding:18px;border-radius:26px}.seal{width:112px;height:112px;top:20px;left:20px}.seal span{font-size:15px}.floating-panel{left:16px;right:16px;bottom:16px;padding:15px}.mini-grid{grid-template-columns:1fr}.mini-stat{padding:12px}.mini-stat strong{font-size:23px}.section{padding:78px 0}.feature-grid,.service-grid,.process-grid,.why-cards,.form-row,.footer-grid{grid-template-columns:1fr}.about-copy,.contact-card{padding:24px;border-radius:24px}.copyright{flex-direction:column;gap:8px}.big-mark{font-size:76px}.marquee span{padding:15px 18px}}
+</style>
+</head>
+<body>
+<div class="top-glow"><div class="orb one"></div><div class="orb two"></div></div>
+
+<nav class="nav" id="nav">
+  <a class="brand" href="#hero" aria-label="AAARON Home">
+    <div class="brand-badge">A</div>
+    <div class="brand-text"><strong>AA<span>A</span>RON</strong><small>A Business Unit of AAA Services Trading LLC</small></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#process">Process</a></li><li><a href="#expertise">Expertise</a></li><li><a href="#contact" class="nav-quote">Get Quote</a></li>
+  </ul>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+</nav>
+<div class="mobile-panel" id="mobilePanel"><a href="#about">About</a><a href="#services">Services</a><a href="#process">Process</a><a href="#expertise">Expertise</a><a href="#contact">Get Quote →</a></div>
+
+<header class="hero" id="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <div class="eyebrow">Profile 2026 – 2027 · GCC Region</div>
+      <h1>Specialized<br><span class="gradient-word">Construction Chemical</span><br>Applicators</h1>
+      <p>AAARON delivers high-performance construction chemical applications for industrial, commercial and infrastructure projects — built around durability, precision and long-term value.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#services">Explore Services →</a>
+        <a class="btn btn-secondary" href="#contact">Request a Quote</a>
+      </div>
+    </div>
+    <div class="hero-card reveal" aria-label="AAARON capability card">
+      <div class="mesh"></div>
+      <div class="seal"><span>Certified<br>Specialist<br>Applicators</span></div>
+      <div class="big-mark">AAARON</div>
+      <div class="floating-panel">
+        <div class="panel-title">Built for demanding project environments</div>
+        <div class="mini-grid">
+          <div class="mini-stat"><strong>8+</strong><span>Service Lines</span></div>
+          <div class="mini-stat"><strong>100%</strong><span>Quality Focus</span></div>
+          <div class="mini-stat"><strong>GCC</strong><span>Regional Coverage</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="strip"><div class="marquee"><span>Resin Flooring <b>•</b></span><span>Protective Coatings <b>•</b></span><span>Thermal Insulation <b>•</b></span><span>Concrete Repairs <b>•</b></span><span>Waterproofing <b>•</b></span><span>Hygiene Flooring <b>•</b></span><span>Paint Works <b>•</b></span><span>Resin Flooring <b>•</b></span><span>Protective Coatings <b>•</b></span><span>Thermal Insulation <b>•</b></span><span>Concrete Repairs <b>•</b></span><span>Waterproofing <b>•</b></span><span>Hygiene Flooring <b>•</b></span><span>Paint Works <b>•</b></span></div></div>
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-head reveal"><div><div class="eyebrow">Who We Are</div><h2>Durable Solutions.<br>Trusted Partnerships.</h2></div><p>We provide cost-effective, high-quality application solutions that enhance structure durability, performance and sustainability.</p></div>
+    <div class="about-grid">
+      <div class="about-copy reveal"><h2>About AAARON</h2><p>At AAARON, we combine skilled teams, advanced equipment and approved applicator partnerships to meet the commercial and technical requirements of every project.</p><p>Our vision is to be a trusted regional leader in specialized construction chemical applications, recognized for innovation, quality and reliable execution.</p><div class="quote">“Building Trust Through Performance and Durability”</div></div>
+      <div class="feature-grid">
+        <div class="feature reveal"><div class="icon">⚙</div><h3>Expert Application</h3><p>Manufacturer-approved application teams with strong site execution standards.</p></div>
+        <div class="feature reveal"><div class="icon">◇</div><h3>Advanced Equipment</h3><p>Modern grinding, spraying and preparation systems for consistent finishes.</p></div>
+        <div class="feature reveal"><div class="icon">✓</div><h3>Certified Applicators</h3><p>Trained by leading construction chemical manufacturers globally.</p></div>
+        <div class="feature reveal"><div class="icon">♻</div><h3>Sustainability</h3><p>Responsible practices focused on durability, waste reduction and efficiency.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section services" id="services">
+  <div class="container">
+    <div class="section-head reveal"><div><div class="eyebrow">Our Services</div><h2>Premium Application<br>Services</h2></div><p>A unified source for specialized construction chemical services covering protection, repair, flooring and building enhancement.</p></div>
+    <div class="service-grid">
+      <article class="service reveal"><div><span class="service-num">01</span><h3>Resin Flooring</h3><p>Epoxy, polyurethane, screed and self-leveling floor systems for demanding environments.</p></div><div class="tags"><span>Epoxy</span><span>PU</span><span>Screed</span></div></article>
+      <article class="service reveal"><div><span class="service-num">02</span><h3>Protective Coatings</h3><p>Anti-corrosion and anti-carbonation systems for concrete, steel and industrial tanks.</p></div><div class="tags"><span>Concrete</span><span>Steel</span><span>Tanks</span></div></article>
+      <article class="service reveal"><div><span class="service-num">03</span><h3>Thermal Insulation</h3><p>Ceramic coatings and PU foam systems for concrete roofs, steel roofs and storage tanks.</p></div><div class="tags"><span>Ceramic</span><span>PU Foam</span><span>Roof</span></div></article>
+      <article class="service reveal"><div><span class="service-num">04</span><h3>Concrete Repairs</h3><p>Structural repair, restoration and jacketing solutions to extend service life.</p></div><div class="tags"><span>Repair</span><span>Jacketing</span><span>Injection</span></div></article>
+      <article class="service reveal"><div><span class="service-num">05</span><h3>Waterproofing</h3><p>Systems for substructures, roofs, wet areas and podiums using membranes and coatings.</p></div><div class="tags"><span>Membrane</span><span>Polyurea</span><span>Acrylic</span></div></article>
+      <article class="service reveal"><div><span class="service-num">06</span><h3>Hygiene Flooring</h3><p>HACCP-ready flooring systems for food, industrial and clean-operation facilities.</p></div><div class="tags"><span>HACCP</span><span>MMA</span><span>PU Screed</span></div></article>
+      <article class="service reveal"><div><span class="service-num">07</span><h3>Paint Works</h3><p>Aseptic, anti-mold, thermal, intumescent and reflective coating applications.</p></div><div class="tags"><span>Aseptic</span><span>Thermal</span><span>Fire</span></div></article>
+      <article class="service reveal"><div><span class="service-num">08+</span><h3>Project Support</h3><p>Application planning, inspection support and site-specific technical recommendations.</p></div><div class="tags"><span>Survey</span><span>Method</span><span>QA/QC</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="container">
+    <div class="section-head reveal"><div><div class="eyebrow">How We Work</div><h2>Clear Process.<br>Strong Delivery.</h2></div><p>Every project is handled through a professional workflow from site study to final handover documentation.</p></div>
+    <div class="process-grid">
+      <div class="step reveal" data-step="01"><h3>Consultation</h3><p>We assess project requirements, substrate conditions and performance expectations.</p></div>
+      <div class="step reveal" data-step="02"><h3>Proposal</h3><p>We prepare a technical proposal with product specification and application method.</p></div>
+      <div class="step reveal" data-step="03"><h3>Application</h3><p>Certified teams execute the work using suitable equipment and site controls.</p></div>
+      <div class="step reveal" data-step="04"><h3>Handover</h3><p>Final inspection, quality verification and documentation are completed professionally.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section why" id="why">
+  <div class="container why-grid">
+    <div class="reveal"><div class="eyebrow">Why AAARON</div><h2>Right Tools.<br>Right Skills.<br>Right Results.</h2><p>We combine manufacturer-approved materials, modern machinery and a trained workforce to deliver reliable construction chemical solutions on time and within budget.</p></div>
+    <div class="why-cards">
+      <div class="why-card reveal"><h3>Certified Applicators</h3><p>Teams trained and approved by leading material manufacturers.</p></div>
+      <div class="why-card reveal"><h3>Quality Assured</h3><p>Quality checks and site controls at each stage of application.</p></div>
+      <div class="why-card reveal"><h3>On-Time Delivery</h3><p>Professional planning to reduce delays and improve site productivity.</p></div>
+      <div class="why-card reveal"><h3>Technical Support</h3><p>Selection, method statement and application guidance for each project.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="expertise">
+  <div class="container expertise-grid">
+    <div class="sticky reveal"><div class="eyebrow">Expertise</div><h2>Built for industrial & commercial sites.</h2><p class="muted">Our team understands surface preparation, application timing, protection requirements and the standards expected on active project sites.</p></div>
+    <div class="expert-list">
+      <details class="expert-item reveal" open><summary><span>01</span> Industrial Floors</summary><p>High-performance flooring systems for warehouses, workshops, factories, parking areas and process areas.</p></details>
+      <details class="expert-item reveal"><summary><span>02</span> Waterproofing & Roof Protection</summary><p>Roof, podium, wet-area and below-grade waterproofing systems selected according to project conditions.</p></details>
+      <details class="expert-item reveal"><summary><span>03</span> Concrete Protection & Repair</summary><p>Repair mortars, injection, jacketing and protective coatings for durable structural performance.</p></details>
+      <details class="expert-item reveal"><summary><span>04</span> Thermal & Protective Coatings</summary><p>Reflective, insulating, anti-corrosion and specialized paint systems for roofs, tanks and structures.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-head reveal"><div><div class="eyebrow">Contact</div><h2>Start Your<br>Project Enquiry</h2></div><p>Send your requirement and our team will review the scope, site condition and suitable application system.</p></div>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <h3>AAARON</h3><p class="muted">A Business Unit of AAA Services Trading LLC</p>
+        <a class="contact-line" href="mailto:aaa@aaaserves.com"><div>✉</div><div><b>Email</b><span>aaa@aaaserves.com</span></div></a>
+        <a class="contact-line" href="https://wa.me/96894369437" target="_blank" rel="noopener"><div>☏</div><div><b>WhatsApp</b><span>+968 9436 9437</span></div></a>
+        <a class="contact-line" href="https://www.aaaserves.com" target="_blank" rel="noopener"><div>↗</div><div><b>Website</b><span>www.aaaserves.com</span></div></a>
+      </div>
+      <div class="contact-card reveal">
+        <form class="form" id="quoteForm">
+          <div class="form-row"><input required placeholder="Your Name" name="name"><input required placeholder="Company" name="company"></div>
+          <div class="form-row"><input required placeholder="Phone / WhatsApp" name="phone"><input placeholder="Email" name="email" type="email"></div>
+          <select name="service"><option value="">Select Service</option><option>Resin Flooring</option><option>Protective Coatings</option><option>Thermal Insulation</option><option>Concrete Repairs</option><option>Waterproofing</option><option>Hygiene Flooring</option><option>Paint Works</option></select>
+          <textarea name="message" placeholder="Project details / location / area / expected schedule"></textarea>
+          <button class="btn btn-primary full" type="submit">Send Enquiry via WhatsApp →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><h4>AAARON</h4><p>Specialized construction chemical applicators delivering durable, technically sound solutions across the GCC region.</p></div>
+      <div><h4>Company</h4><ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#process">Process</a></li></ul></div>
+      <div><h4>Solutions</h4><ul><li><a href="#services">Flooring</a></li><li><a href="#services">Waterproofing</a></li><li><a href="#services">Coatings</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="mailto:aaa@aaaserves.com">Email Us</a></li><li><a href="https://wa.me/96894369437">WhatsApp</a></li><li><a href="https://www.aaaserves.com">AAA Services</a></li></ul></div>
+    </div>
+    <div class="copyright"><span>© 2026 AAARON. All Rights Reserved.</span><span>A Business Unit of AAA Services Trading LLC</span></div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+const menuBtn=document.getElementById('menuBtn');
+const mobilePanel=document.getElementById('mobilePanel');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>35));
+menuBtn.addEventListener('click',()=>mobilePanel.classList.toggle('open'));
+document.querySelectorAll('.mobile-panel a').forEach(a=>a.addEventListener('click',()=>mobilePanel.classList.remove('open')));
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.getElementById('quoteForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const data=Object.fromEntries(new FormData(this).entries());
+  const msg=`AAARON Website Enquiry%0A%0AName: ${encodeURIComponent(data.name||'')}%0ACompany: ${encodeURIComponent(data.company||'')}%0APhone: ${encodeURIComponent(data.phone||'')}%0AEmail: ${encodeURIComponent(data.email||'')}%0AService: ${encodeURIComponent(data.service||'')}%0ADetails: ${encodeURIComponent(data.message||'')}`;
+  window.open(`https://wa.me/96894369437?text=${msg}`,'_blank');
+});
+</script>
+</body>
+</html>
